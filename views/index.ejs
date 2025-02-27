@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Echoed Ink</title>
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+        <div class="container">
+            <div class="post-container">
+                <% if(blogs.length>0){ %>
+                    <% for(let i=blogs.length;i>0;i--){ %>
+                        <div class="post">
+                            <h2>
+                                <%= blogs[i-1].title %>
+                            </h2>
+                            <p class="content" data-entire="<%= blogs[i-1].post %>">
+                                <%= blogs[i-1].preview %>
+                                ...
+                            </p>
+                            <button class="view">View more</button>
+                            <button class="del" data-index="<%= i-1 %>">Delete</button>
+                            <hr>
+                        </div>
+                        <% } %>
+                            <% } else {%>
+                                <div class="post">
+                                    <h2>Title</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque perspiciatis
+                                        labore</p>
+                                    <hr>
+                                </div>
+                                <% } %>
+            </div>
+            <%- include("partials/footer.ejs") %>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
