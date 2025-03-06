@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="out"></div>
+    <div class="dot"></div>
+    <script>
+        const out = document.querySelector(".out");
+        const dot = document.querySelector(".dot");
+
+        window.addEventListener("mousemove",(e)=>{
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            dot.style.left = `${posX}px`;
+            dot.style.top = `${posY}px`;
+
+            out.animate({
+                top : `${posY}px`,
+                left : `${posX}px`
+            },{duration:300,fill:"forwards"});
+        });
+
+        window.addEventListener("click",()=>{
+            out.style.transition = "transform 0.2s ease";
+            out.style.transform = "translate(-50%,-50%) scale(1.5)"
+
+            setTimeout(()=>{
+            out.style.transform = "translate(-50%,-50%) scale(1)"
+        },300);
+        });
+
+
+    </script>
+</body>
+</html>

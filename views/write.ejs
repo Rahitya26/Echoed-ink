@@ -8,6 +8,7 @@
 </head>
 <body>
     <%- include("partials/header.ejs") %>
+    <%- include("partials/mouse.ejs") %>
     <div class="post-container">
         <form action="/submit" method="post">
         <h1 class="write-title">Let your words echo!</h1>
@@ -24,5 +25,14 @@
     </div>
 
 <%- include("partials/footer.ejs") %>
+<script>
+    document.querySelector("textarea").addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault(); // Prevent new line
+        this.form.submit(); // Submit the form
+    }
+});
+
+</script>
 </body>
 </html>
