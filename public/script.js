@@ -17,12 +17,3 @@ $(document).ready(function(){
 });
 
 
-$(".del").on("click",function(){
-    let btn = $(this);
-    let ind= btn.data("index");
-    $.post("/delete",{index:ind},function(){
-        location.reload();
-    });
-});
-
-

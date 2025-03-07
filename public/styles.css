@@ -24,6 +24,7 @@ body{
     width: 5px;
     height: 5px;
     background-color: white;
+    box-shadow: 0px 2px 25px 7px red;
 }
 
 .out,.dot{
@@ -196,6 +197,7 @@ textarea{
         width: 90%;
     }
 
+
     nav a{
         font-size: 1em;
     }
@@ -223,9 +225,7 @@ textarea{
         font-size: 1.2m;
     }
     footer{
-        padding: 5px 0px;
-        display: flex;
-        justify-content: center;
+        visibility: hidden;
     }
     footer p{
         padding: 4px 8px;
@@ -262,13 +262,7 @@ textarea{
     }
 
     footer{
-        padding: 5px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    footer p{
-        padding: 4px 8px;
-        font-size: 0.9em;
+        visibility: hidden;
     }
     .write-title{
         font-size:1.6em;
@@ -325,13 +319,7 @@ textarea{
     }
 
     footer{
-        padding: 5px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    footer p{
-        padding: 4px 8px;
-        font-size: 0.8em;
+        visibility: hidden;
     }
     .write-title{
         font-size:1.4em;
@@ -388,14 +376,9 @@ textarea{
     }
 
     footer{
-        padding: 5px 0px;
-        display: flex;
-        justify-content: center;
+        visibility: hidden;
     }
-    footer p{
-        padding: 4px 8px;
-        font-size: 0.7em;
-    }
+
     .write-title{
         font-size:1.2em;
         text-align: center;
